@@ -18,13 +18,13 @@ function cambiarImagen(int) {
         if (indice < img.length - 1) {
             indice++
         } else {
-            indice = 0
+           
         }
     } else {
         if (indice > 0) {
             indice--
         } else {
-            indice = img.length - 1
+            indice = 0
         }
     }
     document.getElementById("img").src = img[indice]
