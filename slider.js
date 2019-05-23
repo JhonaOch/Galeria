@@ -27,7 +27,17 @@ function cambiarImagen(int) {
             indice = img.length - 1
         }
     }
-    document.getElementById("imagenes").src = img[indice]
+    document.getElementById("img").src = img[indice]
+}
+function startSlide() {
+    let btn = document.getElementById("start")
+    if (btn.value == 'Iniciar') {
+        slid = setInterval(cambiarImagen, 1000)
+        btn.value = 'Parar'
+    } else {
+        clearInterval(slid)
+        btn.value = 'Iniciar'
+    }
 }
 
 
